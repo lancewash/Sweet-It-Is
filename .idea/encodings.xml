@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/img/closeX.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/jquery-ui.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/jquery.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/jquery.stellar.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/modernizr.custom.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/modernizr.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/slick.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/uiMorphingButton_fixed.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/scss" charset="UTF-8" />
   </component>
 </project>

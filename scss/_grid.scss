@@ -19,8 +19,16 @@
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-}
 
+}
+nav.row {
+    margin-bottom: 0;
+    min-width: 100%;
+    
+    &.cbp-spmenu-open {
+        padding-top: 20px;
+    }
+}
 .width-100, .unit-100 { width: 100%;  }
 .width-90, .unit-90   { width: 90%;   }
 .width-80, .unit-80   { width: 80%;   }

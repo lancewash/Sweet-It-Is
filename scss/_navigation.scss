@@ -2,6 +2,10 @@
 -----------------------------------------------------------------------------*/
 
 /* NavBar */
+
+.nav-wrap {
+    margin-top: 10px;
+}
 .navbar {
     @include rem('margin-bottom', $baseLineInEms);
     @include clearfix;

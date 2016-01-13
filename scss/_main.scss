@@ -15,21 +15,21 @@
   //margin: 2%;
 }
 .border-top {
-  top: 25px;
+  top: 15px;
 }
 .border-bottom {
-  bottom: 80px;
+  bottom: 65px;
 }
 .border-left {
-  left: 25px;
+  left: 15px;
 }
 .border-right {
-  right: 25px;
+  right: 15px;
 }
 .border-top, .border-bottom {
-  height: 8px;
-  left: 25px;
-  right: 25px;
+  height: 4px;
+  left: 15px;
+  right: 15px;
 }
 .border-top, .border-bottom, .border-left, .border-right {
   position: absolute;
@@ -37,12 +37,15 @@
   z-index: 10;
 }
 .border-left, .border-right {
-  width: 8px;
-  top: 25px;
-  bottom: 80px;
+  width: 4px;
+  top: 15px;
+  bottom: 65px;
 }
 
 .logo {
   display: block;
   margin: 0 auto;
+}
+.icon-wrap.right {
+  margin-right: 0 !important;
 }
