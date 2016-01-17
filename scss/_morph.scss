@@ -97,8 +97,8 @@
   width: 65px;
   height: 65px;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 5em;
+  top: 5em;
   overflow: hidden;
   border: none;
   background: url(../img/closeX.png) no-repeat center center;
@@ -118,9 +118,10 @@
 /* Style for overlay */
 
 .content-style-overlay {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 100px 50px;
+  background: rgba(255,255,255,1);
+  margin: 5em auto;
+  max-width: 90em;
+  padding: 10em;
   text-align: left;
 
   //ul, ol {
@@ -494,12 +495,16 @@
 
 .morph-button-fixed > button {
   border: 0px solid #FF5C26; //don't touch
-  background: rgba(0,0,0,.25);
+  //background: rgba(0,0,0,.1);
   //font-family: $mainNavFontFamily;
   font-size: 1rem;
   z-index: 1000;
   width: 100%;
   height: 100%;
+  
+  &:hover {
+    //background: rgba(255,255,255,.1);
+  }
 
   //-webkit-transition: opacity 0.5s ease .5s;
   //transition: opacity 0.5s ease .5s;
@@ -578,18 +583,20 @@
 .morph-button-overlay .morph-content {
   overflow: hidden;
   background: rgba(113, 109, 103, 1);
-  background: #FF5C26;
+  background: rgba(255,92,38,1);
+  //background: rgba(255,255,255,.85);
+  //background: rgba(255,255,255,1);
   color: rgba(255,255,255,.9);
   color: rgba(0, 0, 0, .75);
   //border: 1px solid rgba(0,0,0, 1);
   
   &:hover {
-    background: rgba(255, 255, 255, 1);
-    -webkit-transition: all .75s ease-in;
-      -moz-transition: all .75s ease-in;
-      -ms-transition: all .75s ease-in;
-      -o-transition: all .75s ease-in;
-      transition: all .75s ease-in;
+    //background: rgba(255, 255, 255, 1);
+    -webkit-transition: all 1s ease-in;
+      -moz-transition: all 1s ease-in;
+      -ms-transition: all 1s ease-in;
+      -o-transition: all 1s ease-in;
+      transition: all 1s ease-in;
   }
 }
 

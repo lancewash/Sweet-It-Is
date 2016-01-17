@@ -10,15 +10,19 @@
 }
 .container { /* it's the trick to not collapse padding-top in the child element */
     padding-top: 1px;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 0;  // was 2em
+    padding-right: 0;  // was 2em
     margin-top: -1px;
 }
 .row {
     @include rem('margin-bottom', $baseLineInEms);
-    max-width: 1440px;
+    //max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    
+    &.split {
+        margin-bottom: -8px;
+    }
 
 }
 nav.row {
@@ -141,23 +145,23 @@ nav.row {
 .unit-padding {
     @include rem('padding', $baseLineInEms);
 }
-.units-padding .unit-100,
-.units-padding .unit-90,
-.units-padding .unit-80,
-.units-padding .unit-75,
-.units-padding .unit-70,
-.units-padding .unit-66,
-.units-padding .unit-65,
-.units-padding .unit-60,
-.units-padding .unit-50,
-.units-padding .unit-40,
-.units-padding .unit-35,
-.units-padding .unit-33,
-.units-padding .unit-30,
-.units-padding .unit-25,
-.units-padding .unit-20,
-.units-padding .unit-10 {
-    @include rem('padding', $baseLineInEms);
+.padding .unit-100,
+.padding .unit-90,
+.padding .unit-80,
+.padding .unit-75,
+.padding .unit-70,
+.padding .unit-66,
+.padding .unit-65,
+.padding .unit-60,
+.padding .unit-50,
+.padding .unit-40,
+.padding .unit-35,
+.padding .unit-33,
+.padding .unit-30,
+.padding .unit-25,
+.padding .unit-20,
+.padding .unit-10 {
+    padding: 5em;
 }
 
 .split .unit-90,

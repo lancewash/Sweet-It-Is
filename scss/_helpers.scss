@@ -62,7 +62,16 @@
 .right {
     float: right;
 }
+.flex-wrap {
+    display: table;
+    
+    //margin-bottom: -5px;
 
+    [class^="unit-"] {
+        display: table-cell;
+        //display: flex;
+    }
+}
 
 /* Responsive embedded objects */
 .video-wrapper {

@@ -287,13 +287,13 @@ h6 {
 h1 {
   font-size: 36px;
   line-height: 1.111em;
-  margin-bottom: .25em;
+  margin-bottom: 1em;
 }
 
 h2 {
   font-size: 30px;
   line-height: 1.111em;
-  margin-bottom: .5em;
+  margin-bottom: 1.5em;
 }
 
 h3 {
@@ -650,17 +650,20 @@ table caption {
 .container {
   /* it's the trick to not collapse padding-top in the child element */
   padding-top: 1px;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 0;
+  padding-right: 0;
   margin-top: -1px;
 }
 
 .row {
   margin-bottom: 26px;
   margin-bottom: 1.6rem;
-  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.row.split {
+  margin-bottom: -8px;
 }
 
 nav.row {
@@ -932,24 +935,23 @@ nav.row.cbp-spmenu-open {
   padding: 1.6rem;
 }
 
-.units-padding .unit-100,
-.units-padding .unit-90,
-.units-padding .unit-80,
-.units-padding .unit-75,
-.units-padding .unit-70,
-.units-padding .unit-66,
-.units-padding .unit-65,
-.units-padding .unit-60,
-.units-padding .unit-50,
-.units-padding .unit-40,
-.units-padding .unit-35,
-.units-padding .unit-33,
-.units-padding .unit-30,
-.units-padding .unit-25,
-.units-padding .unit-20,
-.units-padding .unit-10 {
-  padding: 26px;
-  padding: 1.6rem;
+.padding .unit-100,
+.padding .unit-90,
+.padding .unit-80,
+.padding .unit-75,
+.padding .unit-70,
+.padding .unit-66,
+.padding .unit-65,
+.padding .unit-60,
+.padding .unit-50,
+.padding .unit-40,
+.padding .unit-35,
+.padding .unit-33,
+.padding .unit-30,
+.padding .unit-25,
+.padding .unit-20,
+.padding .unit-10 {
+  padding: 5em;
 }
 
 .split .unit-90,
@@ -1622,16 +1624,23 @@ Banner
   height: 50px;
   border: none;
   color: #fff;
+  color: rgba(0, 0, 0, 0.75);
   width: 55px;
-  background: #bf3000;
+  background: white;
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 9999;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
 }
 
 .cbp-spmenu {
   background: #FF5C26;
+  background: white;
   position: fixed;
 }
 
@@ -1658,6 +1667,7 @@ Banner
 }
 
 .cbp-spmenu-horizontal a {
+  color: rgba(0, 0, 0, 0.75);
   float: left;
   padding: 0.8em;
 }
@@ -1689,7 +1699,8 @@ Banner
 }
 
 .cbp-spmenu-bottom.cbp-spmenu-open {
-  bottom: -140px;
+  background: #ff5c26;
+  bottom: -130px;
 }
 
 .cbp-spmenu-bottom.cbp-spmenu-open div[class^="unit-"] {
@@ -2340,8 +2351,8 @@ input[type="submit"].btn {
   width: 65px;
   height: 65px;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 5em;
+  top: 5em;
   overflow: hidden;
   border: none;
   background: url(../img/closeX.png) no-repeat center center;
@@ -2354,9 +2365,10 @@ input[type="submit"].btn {
 /* Styles for dummy content */
 /* Style for overlay */
 .content-style-overlay {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 100px 50px;
+  background: white;
+  margin: 5em auto;
+  max-width: 90em;
+  padding: 10em;
   text-align: left;
 }
 
@@ -2661,7 +2673,6 @@ input[type="submit"].btn {
 
 .morph-button-fixed > button {
   border: 0px solid #FF5C26;
-  background: rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   z-index: 1000;
   width: 100%;
@@ -2739,18 +2750,17 @@ input[type="submit"].btn {
 .morph-button-overlay .morph-content {
   overflow: hidden;
   background: #716d67;
-  background: #FF5C26;
+  background: #ff5c26;
   color: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 0.75);
 }
 
 .morph-button-overlay .morph-content:hover {
-  background: white;
-  -webkit-transition: all 0.75s ease-in;
-  -moz-transition: all 0.75s ease-in;
-  -ms-transition: all 0.75s ease-in;
-  -o-transition: all 0.75s ease-in;
-  transition: all 0.75s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .morph-button-overlay.open .morph-content {
@@ -3229,6 +3239,14 @@ input[type="submit"].btn {
   float: right;
 }
 
+.flex-wrap {
+  display: table;
+}
+
+.flex-wrap [class^="unit-"] {
+  display: table-cell;
+}
+
 /* Responsive embedded objects */
 .video-wrapper {
   height: 0;
@@ -3328,36 +3346,43 @@ input[type="submit"].btn {
 }
 
 .canvas {
-  background: url("../img/sweet-it-is-header-bg-1.jpg") 0 0 no-repeat;
   margin: 0 auto;
   max-width: 1680px;
   width: 100%;
 }
 
 .header-main {
+  background: url("../img/sweet-it-is-header-bg-1.jpg") 0 0 no-repeat;
+  height: calc(100vh - 48px);
   height: 100vh;
 }
 
+.parallax-2 {
+  background: url("../img/bg-2.jpg");
+  min-height: 600px;
+  padding: 6em;
+}
+
 .border-top {
-  top: 15px;
+  top: 25px;
 }
 
 .border-bottom {
-  bottom: 65px;
+  bottom: 80px;
 }
 
 .border-left {
-  left: 15px;
+  left: 25px;
 }
 
 .border-right {
-  right: 15px;
+  right: 25px;
 }
 
 .border-top, .border-bottom {
-  height: 4px;
-  left: 15px;
-  right: 15px;
+  height: 1px;
+  left: 25px;
+  right: 25px;
 }
 
 .border-top, .border-bottom, .border-left, .border-right {
@@ -3367,9 +3392,43 @@ input[type="submit"].btn {
 }
 
 .border-left, .border-right {
-  width: 4px;
-  top: 15px;
-  bottom: 65px;
+  width: 1px;
+  top: 25px;
+  bottom: 80px;
+}
+
+.border-top2 {
+  top: 30px;
+}
+
+.border-bottom2 {
+  bottom: 85px;
+}
+
+.border-left2 {
+  left: 30px;
+}
+
+.border-right2 {
+  right: 30px;
+}
+
+.border-top2, .border-bottom2 {
+  height: 1px;
+  left: 30px;
+  right: 30px;
+}
+
+.border-top2, .border-bottom2, .border-left2, .border-right2 {
+  position: absolute;
+  background: white;
+  z-index: 10;
+}
+
+.border-left2, .border-right2 {
+  width: 1px;
+  top: 30px;
+  bottom: 85px;
 }
 
 .logo {
@@ -3379,4 +3438,49 @@ input[type="submit"].btn {
 
 .icon-wrap.right {
   margin-right: 0 !important;
+}
+
+main.content-main {
+  background: #fff;
+}
+
+.centered img {
+  display: block;
+  margin: 0 auto 4em;
+}
+
+.text-centered ul {
+  margin: 0;
+  padding: 0;
+}
+
+.text-centered li {
+  font-size: 1.5rem;
+  list-style-type: none;
+}
+
+hr {
+  background: url("../img/sii-divider.png") no-repeat transparent;
+  height: 34px;
+  margin: 1em auto 3em;
+  width: 470px;
+  border: 0;
+}
+
+.block h2 {
+  color: white;
+  margin-bottom: 2em;
+}
+
+.test-bg-1 {
+  background: url("../img/gallery/mint-green.png") no-repeat;
+  background: #96c5b1;
+}
+
+.clr2 {
+  background: #ECAA03;
+}
+
+.clr3 {
+  background: #00A3CE;
 }

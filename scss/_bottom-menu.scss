@@ -4,15 +4,28 @@
   height: 50px;
   border: none;
   color: #fff;
+  color: rgba(0,0,0,.75);
   width: 55px;
-  background: darken(#FF5C26, 20%);
+  //background: darken(#FF5C26, 20%);
+  //background: rgba(0, 0, 0, .1);
+  background: rgba(255,255,255,1);
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 9999;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -ms-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+
+  //&:hover {
+  //  background: rgba(0,0,0,.25);
+  //}
 }
 .cbp-spmenu {
   background: #FF5C26;
+  background: rgba(255, 255, 255, 1);
   position: fixed;
 }
 
@@ -70,6 +83,7 @@
 //}
 
 .cbp-spmenu-horizontal a {
+  color: rgba(0, 0, 0, .75);
   float: left;
   //width: 20%;
   padding: 0.8em;
@@ -107,7 +121,8 @@
 
 
 .cbp-spmenu-bottom.cbp-spmenu-open {
-  bottom: -140px;
+  background: rgba(255,92,38,1);
+  bottom: -130px;
   
   div[class^="unit-"] {
     margin-top: 10px;
